@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { SheetClose } from "./ui/sheet";
+import { SheetClose } from "@/components/ui/sheet";
 import { IoMdClose } from "react-icons/io";
 
 const links = [
@@ -16,7 +16,7 @@ const links = [
 const MobileNav = () => {
   const pathname = usePathname();
   return (
-    <div className="relative bg-[#18181b] flex flex-col h-full">
+    <div className="relative bg-primary flex flex-col h-full">
       {/* Close button */}
       <SheetClose className="absolute right-5 top-5 p-0 m-0 text-accent hover:bg-transparent focus:outline-none">
         <IoMdClose className="h-6 w-6 text-accent" />
@@ -24,24 +24,25 @@ const MobileNav = () => {
       {/* Logo */}
       <div className="pt-16 pb-12 flex justify-center">
         <h1 className="text-4xl font-semibold font-mono select-none text-white">
-          Dilmin <span className="text-accent">.</span>
+          Luke <span className="text-accent">.</span>
         </h1>
       </div>
       {/* Navigation */}
       <nav className="flex flex-col items-center gap-7 flex-1 justify-center">
         {links.map((link, index) => (
-          <Link
-            href={link.path}
-            key={index}
-            className={`text-lg font-mono font-medium transition-all capitalize px-2 ${
-              pathname === link.path
-                ? "text-accent border-b-2 border-accent pb-1"
-                : "text-white hover:text-accent"
-            }`}
-            tabIndex={0}
-          >
-            {link.name}
-          </Link>
+          <SheetClose key={index} asChild>
+            <Link
+              href={link.path}
+              className={`text-lg font-mono font-medium transition-all capitalize px-2 ${
+                pathname === link.path
+                  ? "text-accent border-b-2 border-accent pb-1"
+                  : "text-white hover:text-accent"
+              }`}
+              tabIndex={0}
+            >
+              {link.name}
+            </Link>
+          </SheetClose>
         ))}
       </nav>
     </div>

@@ -20,8 +20,10 @@ const Nav = ({ isMobile = false }) => {
         <Link
           href={link.path}
           key={index}
-          className={`capitalize hover:text-accent ${
-            link.path === pathname ? "text-accent border-b-2 border-accent" : ""
+          className={`capitalize hover:text-accent transition-all ${
+            link.path === pathname 
+              ? "text-accent border-b-2 border-accent pb-1" 
+              : "text-white"
           } capitalize font-medium hover:text-accent transition-all ${
             isMobile ? "text-lg py-2" : ""
           }`}
