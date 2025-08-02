@@ -2,42 +2,33 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 // components
 import Stairs from "./Stairs";
 
 const StairTransition = () => {
   const pathname = usePathname();
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Trigger animation on route change
-    setIsVisible(true);
-
-    // Hide after animation completes
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, [pathname]);
-
   return (
     <>
-      {isVisible && (
-        <div className="h-screen w-screen fixed top-0 left-0 pointer-events-none z-50">
-          {/* Background overlay */}
+      <AnimatePresence mode="wait">
+        <div key={pathname}>
+          <div
+            className="h-screen w-screen fixed top-0 right-0 
+                pointer-events-none z-40 flex "
+          >
+            <Stairs />
+          </div>
+
           <motion.div
-            className="absolute inset-0 bg-black/20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
+            initial={{ opacity: 1 }}
+            animate={{
+              opacity: 0,
+              transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
+            }}
           />
-          <Stairs />
         </div>
-      )}
+      </AnimatePresence>
     </>
   );
 };

@@ -35,15 +35,15 @@ const projects = [
 
 const Work = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-10 xl:py-20">
+    <section className="min-h-screen flex flex-col justify-center py-8 xl:py-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-10"
         >
-          <h1 className="h1 mb-4">My Work</h1>
+          <h1 className="h1 mb-3">My Work</h1>
           <p className="text-white/70 text-base xl:text-lg max-w-[600px] mx-auto leading-relaxed">
             Here are some of the projects I've worked on. Each project
             represents my commitment to creating high-quality, user-friendly

@@ -25,12 +25,13 @@ const services = [
     description:
       "Modern, responsive web applications built with React, Next.js, and cutting-edge technologies. I create fast, accessible, and SEO-optimized websites that deliver exceptional user experiences.",
     features: [
-      "React & Next.js",
-      "TypeScript",
+      "React",
+      "Next.js",
       "Tailwind CSS",
-      "Performance Optimization",
-      "SEO Best Practices",
-      "Cross-browser Compatibility",
+      "SEO-Optimized",
+      "HTML5",
+      "JavaScript",
+      "CSS3",
     ],
     technologies: [
       "React",
@@ -177,16 +178,16 @@ const Services = () => {
   const [hoveredService, setHoveredService] = useState(null);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center py-10 xl:py-20">
+    <section className="min-h-screen flex flex-col justify-center py-8 xl:py-12">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
-          <h1 className="h1 mb-6">Services</h1>
+          <h1 className="h1 mb-4">Services</h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
             Comprehensive development and design solutions tailored to your
             needs.

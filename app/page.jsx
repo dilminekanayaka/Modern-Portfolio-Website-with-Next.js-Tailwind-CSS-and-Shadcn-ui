@@ -22,7 +22,7 @@ const Home = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-6 xl:pb-12">
           {/*text*/}
-          <div className="text-center xl:text-left order-2 xl:order-none -mt-8 xl:mt-0">
+          <div className="text-center xl:text-left order-2 xl:order-none -mt-18 xl:mt-0">
             <span className="text-lg xl:text-xl text-white/80 mb-3 block">
               Full Stack Developer
             </span>
@@ -31,9 +31,8 @@ const Home = () => {
               <span className="text-accent">Dilmin Ekanayaka</span>
             </h1>
             <p className="max-w-[500px] mb-8 text-white/70 text-base xl:text-lg leading-relaxed">
-              I specialize in creating elegant digital experiences and have
-              strong proficiency in a wide range of programming languages and
-              technologies.
+              Turning caffeine and code into web magic that works beautifully on
+              every screen.
             </p>
             {/* btn and socials*/}
             <div className="flex flex-col xl:flex-row items-center gap-6 xl:gap-8">
