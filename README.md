@@ -2,7 +2,7 @@
 
 A stunning, modern portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Showcase my work, skills, and experience with a beautiful, responsive design.
 
-![Portfolio Preview](https://i.imgur.com/8XZqJ2L.png)
+![Portfolio Preview](https://imgur.com/a/JlgMgLw)
 
 ## ✨ Features
 
@@ -209,9 +209,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Dilmin Ekanayaka** - [pasindusupun461@gmail.com](mailto:pasindusupun461@gmail.com)
-
-Project Link: [https://github.com/yourusername/Modern-Portfolio-Website](https://github.com/yourusername/Modern-Portfolio-Website)
-
----
 
 ⭐ **Star this repository if you found it helpful!**
