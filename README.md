@@ -2,7 +2,7 @@
 
 A stunning, modern portfolio website built with Next.js, Tailwind CSS, and Framer Motion. Showcase my work, skills, and experience with a beautiful, responsive design.
 
-![Portfolio Preview](https://imgur.com/gallery/modern-portfolio-nextjs-shadcn-JlgMgLw)
+<img width="1727" height="932" alt="image" src="https://github.com/user-attachments/assets/05cb7ef5-d0bb-4571-aa65-b47c419a03b1" />
 
 ## ✨ Features
 
