@@ -2,46 +2,30 @@
 
 import { motion } from "framer-motion";
 
-// Animation variants
-const stairAnimation = {
-  initial: {
-    top: "0%",
-  },
-  animate: {
-    top: "100%",
-  },
-  exit: {
-    top: ["100%", "0%"],
-  },
-};
-
-// Helper to reverse delay order
-const reverseIndex = (index) => {
-  const totalSteps = 6;
-  return totalSteps - index - 1;
-};
-
 const Stairs = () => {
+  const stairCount = 6;
+
   return (
-    <>
-      {[...Array(6)].map((_, index) => { 
+    <div className="h-full w-full flex">
+      {[...Array(stairCount)].map((_, index) => {
+        const delay = (stairCount - 1 - index) * 0.08;
+
         return (
-        <motion.div
-          key={index}
-          variants={stairAnimation}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{
-            duration: 0.3,
-            ease: "easeInOut",
-            delay: reverseIndex(index) * 0.1,
-          }}
-          className="h-full w-full bg-white relative"
-        />
+          <motion.div
+            key={index}
+            className="h-full w-1/6 bg-white relative"
+            initial={{ top: "-100%" }}
+            animate={{ top: "0%" }}
+            transition={{
+              duration: 0.8,
+              ease: "easeInOut",
+              delay: delay,
+            }}
+            style={{ zIndex: stairCount - index }}
+          />
         );
       })}
-    </>
+    </div>
   );
 };
 
