@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${jetBrainsMono.variable} font-primary bg-primary text-white min-h-screen`}
+        className={`${jetBrainsMono.variable} font-primary bg-primary text-white`}
       >
         <Header />
         <StairTransition />

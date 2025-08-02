@@ -8,7 +8,7 @@ const Stairs = () => {
   return (
     <div className="h-full w-full flex">
       {[...Array(stairCount)].map((_, index) => {
-        const delay = (stairCount - 1 - index) * 0.08;
+        const delay = (stairCount - 1 - index) * 0.03;
 
         return (
           <motion.div
@@ -17,7 +17,7 @@ const Stairs = () => {
             initial={{ top: "-100%" }}
             animate={{ top: "0%" }}
             transition={{
-              duration: 0.8,
+              duration: 0.4,
               ease: "easeInOut",
               delay: delay,
             }}
