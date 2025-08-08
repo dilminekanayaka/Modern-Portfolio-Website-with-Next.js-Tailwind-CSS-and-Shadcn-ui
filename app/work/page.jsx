@@ -5,31 +5,32 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Bite.-Restaurant Management System",
     description:
-      "A modern e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "/assets/work/thumb1.png",
-    github: "https://github.com/username/project1",
-    live: "https://project1.com",
+      "A modern and fully functional restaurant management system built with HTML, CSS, JavaScript, and PHP. Features an interactive admin dashboard with full CRUD operations, all connected to a MySQL database via phpMyAdmin",
+    technologies: ["HTML", "CSS", "JavaScript", "Php", " MySQL"],
+    image: "/assets/work/work1.png",
+    github: "https://github.com/dilminekanayaka/Restaurant-Management-System",
+    live: "#",
   },
   {
-    title: "Portfolio Website",
+    title: "SereneTripsLK-Travel Management System",
     description:
-      "A responsive portfolio website showcasing my work and skills. Built with Next.js and Tailwind CSS for optimal performance.",
-    technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    image: "/assets/work/thumb2.png",
-    github: "https://github.com/username/project2",
-    live: "https://project2.com",
+      "A travel booking website for Sri Lanka, offering curated tour packages with a booking system. Built with HTML, CSS, JavaScript, and PHP, and fully connected to a MySQL database via phpMyAdmin. Includes a complete admin dashboard for managing packages and bookings.",
+    technologies: ["HTML", "CSS", "JavaScript", "Php", "MySQL"],
+    image: "/assets/work/work2.png",
+    github: "https://github.com/dilminekanayaka/SereneTripsLK",
+    live: "#",
   },
   {
-    title: "Task Management App",
+    title: "Crown Glory Hair Salon Website",
     description:
-      "A collaborative task management application with real-time updates and team collaboration features.",
-    technologies: ["React", "Firebase", "Material-UI"],
-    image: "/assets/work/thumb3.png",
-    github: "https://github.com/username/project3",
-    live: "https://project3.com",
+      "A modern, feminine salon website for natural hair care services, built with React and Tailwind CSS. Customers can browse services and book appointments online, while admins receive real-time notifications for new bookings.",
+    technologies: ["React", "Tailwind CSS", "Node.js"],
+    image: "/assets/work/work3.png",
+    github:
+      "https://github.com/dilminekanayaka/crown-glory-hair-salon-website-react-tailwindcss",
+    live: "#",
   },
 ];
 
