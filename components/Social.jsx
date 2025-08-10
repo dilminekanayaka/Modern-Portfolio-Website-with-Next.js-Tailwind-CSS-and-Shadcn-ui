@@ -14,7 +14,7 @@ const Social = ({ containerStyles, iconStyles }) => {
     },
     {
       name: "Behance",
-      path: "https://www.behance.net/dilminekanayaka",
+      path: "https://www.behance.net/dilminekanayake",
     },
   ];
 

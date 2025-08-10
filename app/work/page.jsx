@@ -32,6 +32,33 @@ const projects = [
       "https://github.com/dilminekanayaka/crown-glory-hair-salon-website-react-tailwindcss",
     live: "#",
   },
+  {
+    title: "Ocean Breeze Resort - Hotel Management System",
+    description:
+      "A Java-based desktop application for managing hotel operations at Ocean Breeze Resort. Features include customer management, room booking, employee records, department tracking, and service updates, all connected to a MySQL database.",
+    technologies: ["Java", "Swing", "MySQL"],
+    image: "/assets/work/work4.jpg",
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "Python Buddy - Interactive Learning Assistant",
+    description:
+      "A Python-based chatbot designed to teach Python programming from basics to advanced. Includes lessons, exercises, code examples, a progress tracker, and a Python cheat sheet for quick reference.",
+    technologies: ["Python", "Tkinter", "SQLite"],
+    image: "/assets/work/work5.png",
+    github: "#",
+    live: "#",
+  },
+  {
+    title: "Byte Buddy - AI Chatbot",
+    description:
+      "A web-based AI chatbot built with HTML, CSS, and JavaScript using the free Cohere API. Works like ChatGPT, allowing users to ask questions and receive instant responses on any topic.",
+    technologies: ["HTML", "CSS", "JavaScript", "Cohere API"],
+    image: "/assets/work/work6.png",
+    github: "#",
+    live: "#",
+  },
 ];
 
 const Work = () => {
@@ -46,9 +73,7 @@ const Work = () => {
         >
           <h1 className="h1 mb-3">My Work</h1>
           <p className="text-white/70 text-base xl:text-lg max-w-[600px] mx-auto leading-relaxed">
-            Here are some of the projects I've worked on. Each project
-            represents my commitment to creating high-quality, user-friendly
-            applications.
+            Here are some of the projects I've worked on.
           </p>
         </motion.div>
 

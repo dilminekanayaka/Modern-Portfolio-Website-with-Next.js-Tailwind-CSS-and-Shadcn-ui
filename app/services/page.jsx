@@ -1,245 +1,107 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  BsArrowDownRight,
-  BsCodeSlash,
-  BsPalette,
-  BsWordpress,
-  BsBox,
-  BsPhone,
-  BsGear,
-  BsGraphUp,
-  BsShieldCheck,
-  BsLightning,
-  BsEye,
-  BsStar,
-} from "react-icons/bs";
+import { BsArrowDownRight } from "react-icons/bs";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const services = [
   {
     num: "01",
-    title: "Full-Stack Web Development",
-    icon: <BsCodeSlash className="text-2xl" />,
+    title: "Frontend Development",
     description:
-      "I build complete web apps from the user interface to the backend and database. Fast, secure, and ready to grow.",
-    features: [
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "RestAPI",
-      "NodeJs",
-      "MySQL",
-      "JavaScript",
-    ],
-    technologies: [
-      "React",
-      "Next.js",
-      "NodeJs",
-      "MySQL",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-    ],
-    href: "/work",
-    color: "from-blue-500 to-cyan-500",
+      "Crafting responsive and interactive interfaces using modern JavaScript frameworks to ensure seamless user experiences.",
+    href: "/services/frontend",
   },
   {
     num: "02",
     title: "UI/UX Design",
-    icon: <BsPalette className="text-2xl" />,
     description:
-      "Clean, modern designs that are easy to use. I create wireframes and interactive prototypes to bring ideas to life.",
-    features: ["Figma", "Wireframing", "Prototyping", "Design Systems"],
-    technologies: ["Figma", "Wireframing", "Prototyping", "Design Systems"],
-    href: "/work",
-    color: "from-purple-500 to-pink-500",
+      "Designing intuitive user interfaces and engaging user experiences focused on usability, accessibility, and aesthetics.",
+    href: "/services/ui-ux",
   },
   {
     num: "03",
-    title: "Cloud & DevOps",
-    icon: <BsPhone className="text-2xl" />,
+    title: "Backend Development",
     description:
-      "I set up apps to run smoothly on the cloud with automated deployment, updates, and scaling.",
-    features: [
-      "AWS (EC2, S3, RDS)",
-      "Docker",
-      "GitHub Actions",
-      "CI/CD Pipelines",
-    ],
-    technologies: [
-      "AWS (EC2, S3, RDS)",
-      "Docker",
-      "GitHub Actions",
-      "CI/CD Pipelines",
-    ],
-    href: "/work",
-    color: "from-green-500 to-emerald-500",
+      "Building scalable server-side applications, APIs, and databases with a focus on performance and security.",
+    href: "/services/backend",
   },
   {
     num: "04",
-    title: "Website Speed & SEO Optimization",
-    icon: <BsGear className="text-2xl" />,
+    title: "DevOps Engineering",
     description:
-      "I make websites load faster and rank better on Google, with clean code and best practices.",
-    features: [
-      "Page Speed (Lighthouse)",
-      "SEO Optimization",
-      "Mobile-friendly Design",
-      "Image & Code Optimization",
-    ],
-    technologies: [
-      "Page Speed (Lighthouse)",
-      "SEO Optimization",
-      "Mobile-friendly Design",
-      "Image & Code Optimization",
-    ],
-    href: "/work",
-    color: "from-orange-500 to-red-500",
+      "Automating deployment pipelines, managing cloud infrastructure, and ensuring system reliability and uptime.",
+    href: "/services/devops",
   },
   {
     num: "05",
-    title: "Admin Dashboards",
-    icon: <BsBox className="text-2xl" />,
+    title: "Automation Testing",
     description:
-      "Custom dashboards and control panels to manage your data and users easily.",
-    features: ["React / Next.js", "Tailwind CSS", "Chart.js ", "Node.js "],
-    technologies: ["React / Next.js", "Tailwind CSS", "Chart.js ", "Node.js "],
-    href: "/work",
-    color: "from-indigo-500 to-blue-500",
+      "Implementing automated testing strategies to ensure software reliability and reduce manual QA efforts.",
+    href: "/services/testing",
+  },
+  {
+    num: "06",
+    title: "Python App Development",
+    description:
+      "Creating robust and efficient Python-based applications for web, automation, and data processing tasks.",
+    href: "/services/python",
   },
 ];
 
 const Services = () => {
-  const [selectedService, setSelectedService] = useState(null);
-  const [hoveredService, setHoveredService] = useState(null);
-
   return (
-    <section className="min-h-screen flex flex-col justify-center py-8 xl:py-12">
+    <section className="bg-background py-20">
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="h1 mb-4">Services</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Comprehensive development and design solutions tailored to your
-            needs.
-          </p>
-        </motion.div>
-
-        {/* Services Grid */}
-        <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{
             opacity: 1,
-            transition: { delay: 0.2, duration: 0.6, ease: "easeIn" },
+            y: 0,
+            transition: { delay: 0.2, duration: 0.7, ease: "easeOut" },
           }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12"
         >
-          {services.map((service, index) => {
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                onHoverStart={() => setHoveredService(index)}
-                onHoverEnd={() => setHoveredService(null)}
-                onClick={() =>
-                  setSelectedService(selectedService === index ? null : index)
-                }
-                className="group cursor-pointer"
-              >
-                <div className="bg-[#1a1a1f] p-8 rounded-xl border border-white/5 hover:border-white/20 transition-all duration-300 relative overflow-hidden">
-                  {/* Top Section */}
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center text-white/80 group-hover:text-accent transition-colors duration-300">
-                        {service.icon}
-                      </div>
-                      <div className="text-2xl font-light text-white/40 group-hover:text-white/60 transition-colors duration-300">
-                        {service.num}
-                      </div>
-                    </div>
-                    <motion.div
-                      animate={{ rotate: hoveredService === index ? 45 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-accent transition-all duration-300 flex justify-center items-center"
-                    >
-                      <BsArrowDownRight className="text-white/60 group-hover:text-black text-sm" />
-                    </motion.div>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-[#121212] rounded-2xl p-8 hover:bg-[#1e1e1e] transition-all shadow-xl hover:shadow-2xl border border-white/10"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-5xl font-black text-white/10 group-hover:text-accent transition-colors duration-300">
+                  {service.num}
+                </span>
+
+                {service.href ? (
+                  <Link
+                    href={service.href}
+                    className="w-[48px] h-[48px] rounded-full bg-white flex justify-center items-center transition-all duration-300 group-hover:bg-accent hover:rotate-[-45deg]"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
+                    <BsArrowDownRight className="text-primary text-2xl" />
+                  </Link>
+                ) : (
+                  <div className="w-[48px] h-[48px] rounded-full bg-white/10 flex justify-center items-center opacity-40">
+                    <BsArrowDownRight className="text-primary text-2xl" />
                   </div>
+                )}
+              </div>
 
-                  {/* Title */}
-                  <h2 className="text-xl font-semibold leading-tight text-white group-hover:text-accent transition-colors duration-300 mb-4">
-                    {service.title}
-                  </h2>
+              {/* Title */}
+              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-accent transition-colors duration-300">
+                {service.title}
+              </h3>
 
-                  {/* Description */}
-                  <p className="text-white/50 text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
+              {/* Description */}
+              <p className="text-white/70 leading-relaxed text-sm">
+                {service.description}
+              </p>
 
-                  {/* Technologies */}
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies
-                        .slice(0, 4)
-                        .map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      {service.technologies.length > 4 && (
-                        <span className="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">
-                          +{service.technologies.length - 4}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Features - Show on hover or when selected */}
-                  <AnimatePresence>
-                    {(hoveredService === index ||
-                      selectedService === index) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden border-t border-white/5 pt-4"
-                      >
-                        <div className="grid grid-cols-2 gap-2">
-                          {service.features
-                            .slice(0, 4)
-                            .map((feature, featureIndex) => (
-                              <motion.div
-                                key={featureIndex}
-                                initial={{ opacity: 0, x: -10 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: featureIndex * 0.1 }}
-                                className="text-white/40 text-xs flex items-center gap-2"
-                              >
-                                <div className="w-1 h-1 bg-accent rounded-full" />
-                                {feature}
-                              </motion.div>
-                            ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            );
-          })}
+              {/* Divider */}
+              <div className="mt-6 border-t border-white/10 w-full" />
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
