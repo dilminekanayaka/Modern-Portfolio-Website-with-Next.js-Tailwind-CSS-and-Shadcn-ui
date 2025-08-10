@@ -36,8 +36,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 // About data
 const about = {
   title: "About me",
-  description:
-    "Passionate Full-Stack Developer with expertise in modern web technologies. I specialize in creating scalable, user-friendly applications using React, Next.js, and Node.js. With a strong foundation in both frontend and backend development, I bring ideas to life through clean code and innovative solutions.",
   info: [
     {
       icon: <FaUser />,
@@ -87,60 +85,13 @@ const about = {
 // Experience data
 const experience = {
   title: "My Experience",
-  description:
-    "My professional journey spans over 3 years of developing innovative web applications and digital solutions. I've worked with diverse teams and technologies to deliver high-quality products.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Senior Full-Stack Developer",
+      company: "CINEC Campus",
+      position: "Undergraduate Student",
       duration: "2023 - Present",
       description:
-        "Leading development of enterprise web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.",
-      technologies: ["React", "Node.js", "AWS", "MongoDB", "TypeScript"],
-      achievements: [
-        "Led team of 5 developers",
-        "Improved app performance by 40%",
-        "Implemented CI/CD pipeline",
-      ],
-    },
-    {
-      company: "Digital Innovations Ltd.",
-      position: "Frontend Developer",
-      duration: "2022 - 2023",
-      description:
-        "Developed responsive user interfaces and implemented modern design patterns. Collaborated with UX/UI teams to create seamless user experiences.",
-      technologies: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
-      achievements: [
-        "Built 10+ responsive components",
-        "Reduced bundle size by 25%",
-        "Improved accessibility score",
-      ],
-    },
-    {
-      company: "StartupHub",
-      position: "Junior Developer",
-      duration: "2021 - 2022",
-      description:
-        "Built and maintained web applications, worked on bug fixes, and contributed to feature development in an agile environment.",
-      technologies: ["JavaScript", "React", "Node.js", "PostgreSQL"],
-      achievements: [
-        "Fixed 50+ critical bugs",
-        "Implemented 15+ features",
-        "Mentored 2 interns",
-      ],
-    },
-    {
-      company: "Freelance Projects",
-      position: "Full-Stack Developer",
-      duration: "2021 - Present",
-      description:
-        "Delivered custom web solutions for various clients, from e-commerce platforms to portfolio websites and business applications.",
-      technologies: ["React", "Next.js", "Node.js", "MongoDB", "Stripe"],
-      achievements: [
-        "Completed 20+ projects",
-        "100% client satisfaction",
-        "Average 4.9/5 rating",
-      ],
+        "Currently pursuing a BSc (Hons) in Software Engineering. Developing skills in React, Next.js, Node.js, and cloud technologies through coursework and personal projects.",
     },
   ],
 };
@@ -148,8 +99,6 @@ const experience = {
 // Education data
 const education = {
   title: "My Education",
-  description:
-    "My educational background combines formal computer science education with continuous learning through certifications and practical experience.",
   items: [
     {
       institution: "CINEC campus",
@@ -236,24 +185,8 @@ const Resume = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl xl:text-5xl font-bold text-white mb-3">
-            Resume
-          </h1>
-          <p className="text-white/60 text-lg xl:text-xl max-w-3xl mx-auto leading-relaxed mb-6">
-            My professional journey, skills, and achievements in web development
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={handleDownloadCV}
-            className="inline-flex items-center gap-3 bg-accent text-black px-8 py-4 rounded-xl font-semibold hover:bg-accent/90 transition-all shadow-lg hover:shadow-xl"
-          >
-            <FaDownload />
-            Download CV
-          </motion.button>
-        </motion.div>
+          className="text-center mb-0"
+        ></motion.div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-12">
