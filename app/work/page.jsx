@@ -70,12 +70,7 @@ const Work = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
-        >
-          <h1 className="h1 mb-3">My Work</h1>
-          <p className="text-white/70 text-base xl:text-lg max-w-[600px] mx-auto leading-relaxed">
-            Here are some of the projects I've worked on.
-          </p>
-        </motion.div>
+        ></motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-10">
           {projects.map((project, index) => (

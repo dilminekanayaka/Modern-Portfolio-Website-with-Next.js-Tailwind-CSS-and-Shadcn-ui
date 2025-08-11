@@ -3,10 +3,10 @@ import Nav from "./nav";
 import { Button } from "@/components/ui/button";
 import MobileNav from "./MobileNav";
 
-//components
+// components
 const Header = () => {
   return (
-    <header className="py-6 xl:py-8 text-white">
+    <header className="py-8 xl:py-12 text-white">
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
@@ -15,7 +15,7 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* dekstop nav and hire me button */}
+        {/* desktop nav and hire me button */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link href="/contact">
@@ -23,7 +23,7 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* mobile nav*/}
+        {/* mobile nav */}
         <div className="xl:hidden">
           <MobileNav />
         </div>
