@@ -179,7 +179,7 @@ const Resume = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="min-h-screen py-8 xl:py-12"
     >
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 -mt-20 max-w-7xl">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}

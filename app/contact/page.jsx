@@ -58,24 +58,16 @@ const Contact = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="min-h-screen py-8 xl:py-12"
+      className="min-h-screen py-8 xl:py-12 -mt-16"
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto  -mt-8 px-4 max-w-6xl">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-center mb-12"
-        >
-          <h1 className="text-4xl xl:text-5xl font-bold text-white mb-3">
-            Let's work together
-          </h1>
-          <p className="text-white/60 text-lg xl:text-xl max-w-2xl mx-auto leading-relaxed">
-            Ready to bring your ideas to life? Get in touch and let's create
-            something amazing together.
-          </p>
-        </motion.div>
+        ></motion.div>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
           {/* Contact Information Section */}

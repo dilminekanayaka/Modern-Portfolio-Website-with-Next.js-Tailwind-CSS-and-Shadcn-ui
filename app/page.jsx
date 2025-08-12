@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <section className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-6 xl:pb-12">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-0 -mt-8 xl:pb-12">
           {/*text*/}
           <div className="text-center xl:text-left order-2 xl:order-none -mt-18 xl:mt-0">
             <span className="text-lg xl:text-xl text-white/80 mb-3 block">

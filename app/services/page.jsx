@@ -60,7 +60,7 @@ const Services = () => {
             y: 0,
             transition: { delay: 0.2, duration: 0.7, ease: "easeOut" },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 -mt-20"
         >
           {services.map((service, index) => (
             <div
@@ -74,13 +74,13 @@ const Services = () => {
                 </span>
 
                 {service.href ? (
-                  <Link
+                  <div
                     href={service.href}
                     className="w-[48px] h-[48px] rounded-full bg-white flex justify-center items-center transition-all duration-300 group-hover:bg-accent hover:rotate-[-45deg]"
                     aria-label={`Learn more about ${service.title}`}
                   >
                     <BsArrowDownRight className="text-primary text-2xl" />
-                  </Link>
+                  </div>
                 ) : (
                   <div className="w-[48px] h-[48px] rounded-full bg-white/10 flex justify-center items-center opacity-40">
                     <BsArrowDownRight className="text-primary text-2xl" />

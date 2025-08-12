@@ -63,7 +63,7 @@ const projects = [
 
 const Work = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-8 xl:py-12">
+    <section className="min-h-screen flex flex-col justify-center -mt-20 py-8 xl:py-12">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
