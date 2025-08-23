@@ -7,45 +7,51 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Frontend Development",
+    title: "Full-Stack Web Development",
     description:
-      "Crafting responsive and interactive interfaces using modern JavaScript frameworks to ensure seamless user experiences.",
-    href: "/services/frontend",
+      "End-to-end web applications with seamless front-end and back-end integration. I build scalable, secure, and user-friendly solutions.",
+    technologies: ["React / Next.js", "Node.js", "MySQL", "MongoDB"],
+    href: "/services/fullstack",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Designing intuitive user interfaces and engaging user experiences focused on usability, accessibility, and aesthetics.",
+      "Modern, user-friendly designs that focus on smooth navigation and great experiences. From wireframes to final prototypes.",
+    technologies: ["Figma"],
     href: "/services/ui-ux",
   },
   {
     num: "03",
     title: "Backend Development",
     description:
-      "Building scalable server-side applications, APIs, and databases with a focus on performance and security.",
+      "Robust and secure server-side applications with APIs, authentication, and integrations.",
+    technologies: ["Node.js", "Python (Django)"],
     href: "/services/backend",
   },
   {
     num: "04",
-    title: "DevOps Engineering",
+    title: "Database Design & Management",
     description:
-      "Automating deployment pipelines, managing cloud infrastructure, and ensuring system reliability and uptime.",
-    href: "/services/devops",
+      "Efficient, reliable databases to power your applications with optimized queries and secure storage.",
+    technologies: ["MySQL", "MongoDB"],
+    href: "/services/database",
   },
   {
     num: "05",
-    title: "Automation Testing",
+    title: "Automation & Testing",
     description:
-      "Implementing automated testing strategies to ensure software reliability and reduce manual QA efforts.",
-    href: "/services/testing",
+      "Ensure software quality with automated testing and CI/CD pipelines for smooth deployments.",
+    technologies: ["Selenium", "GitHub Actions (CI/CD)", "Jmeter"],
+    href: "/services/automation",
   },
   {
     num: "06",
-    title: "Python App Development",
+    title: "WordPress Development",
     description:
-      "Creating robust and efficient Python-based applications for web, automation, and data processing tasks.",
-    href: "/services/python",
+      "Custom WordPress websites, themes, and plugins for businesses, blogs, and e-commerce.",
+    technologies: ["WordPress CMS", "Elementor", "WooCommerce"],
+    href: "/services/wordpress",
   },
 ];
 
@@ -94,9 +100,28 @@ const Services = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-white/70 leading-relaxed text-sm">
+              <p className="text-white/70 leading-relaxed text-sm mb-4">
                 {service.description}
               </p>
+
+              {/* Technologies */}
+              {service.technologies && (
+                <div className="mb-4">
+                  <p className="text-white/50 text-xs mb-2 font-medium">
+                    Tech I use:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-2 py-1 bg-accent/10 text-accent text-xs rounded-full border border-accent/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Divider */}
               <div className="mt-6 border-t border-white/10 w-full" />

@@ -36,6 +36,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 // About data
 const about = {
   title: "About me",
+  description:
+    "Personal information and contact details to get in touch with me for opportunities and collaborations.",
   info: [
     {
       icon: <FaUser />,
@@ -78,6 +80,38 @@ const about = {
       icon: <FaGlobe />,
       fieldName: "Languages",
       fieldValue: "English, Sinhala",
+    },
+  ],
+};
+
+// Certifications data
+const certifications = {
+  title: "My Certifications",
+  description: "",
+  items: [
+    {
+      name: "Python for beginners",
+      issuer: "University of Moratuwa",
+      date: "2023",
+      image: "/assets/certifications/python.png",
+    },
+    {
+      name: "Web Design for Beginners",
+      issuer: "University of Moratuwa",
+      date: "2023",
+      image: "/assets/certifications/web-cert.png",
+    },
+    {
+      name: "Front-End Web Development using JavaScript and React.js",
+      issuer: "DewTown",
+      date: "2024",
+      image: "/assets/certifications/react1-cert.png",
+    },
+    {
+      name: "Front-End Web Development using JavaScript and React.js",
+      issuer: "Microsoft Learn",
+      date: "2024",
+      image: "/assets/certifications/react2-cert.png",
     },
   ],
 };
@@ -177,9 +211,9 @@ const Resume = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="min-h-screen py-8 xl:py-12"
+      className="min-h-screen py-4 xl:py-8 2xl:py-12"
     >
-      <div className="container mx-auto px-4 -mt-20 max-w-7xl">
+      <div className="container mx-auto px-4 mt-8 xl:-mt-14 max-w-7xl">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -189,61 +223,83 @@ const Resume = () => {
         ></motion.div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 xl:gap-12">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 xl:gap-12">
             {/* Sidebar Navigation */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="xl:col-span-1"
+              className="xl:col-span-1 order-1 xl:order-1"
             >
-              <TabsList className="flex flex-col w-full bg-[#1a1a1f]/50 backdrop-blur-sm p-4 rounded-2xl border border-white/5 gap-2">
+              <TabsList className="flex flex-row xl:flex-col w-full bg-[#1a1a1f]/50 backdrop-blur-sm p-3 xl:p-4 rounded-2xl border border-white/5 gap-2 xl:gap-2 overflow-x-auto xl:overflow-visible scrollbar-hide">
                 <TabsTrigger
                   value="experience"
-                  className="w-full justify-start text-left p-4 rounded-xl hover:bg-accent/10 transition-all"
+                  className="w-full justify-start text-left p-3 xl:p-4 rounded-xl hover:bg-accent/10 transition-all min-w-fit xl:min-w-full"
                 >
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2 xl:gap-3"
                   >
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="font-medium">Experience</span>
+                    <span className="font-medium text-sm xl:text-base">
+                      Experience
+                    </span>
                   </motion.div>
                 </TabsTrigger>
                 <TabsTrigger
                   value="education"
-                  className="w-full justify-start text-left p-4 rounded-xl hover:bg-accent/10 transition-all"
+                  className="w-full justify-start text-left p-3 xl:p-4 rounded-xl hover:bg-accent/10 transition-all min-w-fit xl:min-w-full"
                 >
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2 xl:gap-3"
                   >
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="font-medium">Education</span>
+                    <span className="font-medium text-sm xl:text-base">
+                      Education
+                    </span>
                   </motion.div>
                 </TabsTrigger>
                 <TabsTrigger
                   value="skills"
-                  className="w-full justify-start text-left p-4 rounded-xl hover:bg-accent/10 transition-all"
+                  className="w-full justify-start text-left p-3 xl:p-4 rounded-xl hover:bg-accent/10 transition-all min-w-fit xl:min-w-full"
                 >
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2 xl:gap-3"
                   >
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="font-medium">Skills</span>
+                    <span className="font-medium text-sm xl:text-base">
+                      Skills
+                    </span>
+                  </motion.div>
+                </TabsTrigger>
+                <TabsTrigger
+                  value="certifications"
+                  className="w-full justify-start text-left p-3 xl:p-4 rounded-xl hover:bg-accent/10 transition-all min-w-fit xl:min-w-full"
+                >
+                  <motion.div
+                    whileHover={{ x: 5 }}
+                    className="flex items-center gap-2 xl:gap-3"
+                  >
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <span className="font-medium text-sm xl:text-base">
+                      Certifications
+                    </span>
                   </motion.div>
                 </TabsTrigger>
                 <TabsTrigger
                   value="about"
-                  className="w-full justify-start text-left p-4 rounded-xl hover:bg-accent/10 transition-all"
+                  className="w-full justify-start text-left p-3 xl:p-4 rounded-xl hover:bg-accent/10 transition-all min-w-fit xl:min-w-full"
                 >
                   <motion.div
                     whileHover={{ x: 5 }}
-                    className="flex items-center gap-3"
+                    className="flex items-center gap-2 xl:gap-3"
                   >
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="font-medium">About me</span>
+                    <span className="font-medium text-sm xl:text-base">
+                      About me
+                    </span>
                   </motion.div>
                 </TabsTrigger>
               </TabsList>
@@ -254,7 +310,7 @@ const Resume = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="xl:col-span-3"
+              className="xl:col-span-3 order-2 xl:order-2"
             >
               <AnimatePresence mode="wait">
                 {/* Experience */}
@@ -279,7 +335,7 @@ const Resume = () => {
                       </p>
                     </div>
 
-                    <ScrollArea className="h-[600px] pr-4">
+                    <ScrollArea className="h-[400px] xl:h-[600px] pr-4">
                       <div className="space-y-6">
                         {experience.items.map((item, index) => (
                           <motion.div
@@ -376,7 +432,7 @@ const Resume = () => {
                       </p>
                     </div>
 
-                    <ScrollArea className="h-[600px] pr-4">
+                    <ScrollArea className="h-[400px] xl:h-[600px] pr-4">
                       <div className="space-y-6">
                         {education.items.map((item, index) => (
                           <motion.div
@@ -478,7 +534,7 @@ const Resume = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 xl:gap-4">
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -729,6 +785,81 @@ const Resume = () => {
                         </div>
                       </motion.div>
                     </div>
+                  </motion.div>
+                </TabsContent>
+
+                {/* Certifications */}
+                <TabsContent
+                  key="certifications"
+                  value="certifications"
+                  className="w-full"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4 }}
+                    className="space-y-8"
+                  >
+                    <div className="text-center xl:text-left">
+                      <h2 className="text-3xl xl:text-4xl font-bold text-white mb-4">
+                        {certifications.title}
+                      </h2>
+                      <p className="text-white/60 text-lg leading-relaxed max-w-3xl">
+                        {certifications.description}
+                      </p>
+                    </div>
+
+                    <ScrollArea className="h-[400px] xl:h-[600px] pr-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {certifications.items.map((cert, index) => (
+                          <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            className="bg-[#1a1a1f]/50 backdrop-blur-sm rounded-2xl border border-white/5 hover:border-accent/30 transition-all duration-300 group overflow-hidden"
+                          >
+                            {/* Certification Image */}
+                            <div className="relative h-48 bg-gradient-to-br from-accent/10 to-accent/5 flex items-center justify-center overflow-hidden">
+                              <img
+                                src={cert.image}
+                                alt={cert.name}
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  // Fallback to star icon if image fails to load
+                                  e.target.style.display = "none";
+                                  e.target.nextElementSibling.style.display =
+                                    "flex";
+                                }}
+                              />
+                              <div
+                                className="w-24 h-24 bg-accent/20 rounded-full flex items-center justify-center"
+                                style={{ display: "none" }}
+                              >
+                                <FaStar className="text-3xl text-accent" />
+                              </div>
+                            </div>
+
+                            {/* Certification Details */}
+                            <div className="p-6 space-y-4">
+                              <div className="space-y-3">
+                                <h3 className="text-lg font-semibold text-white group-hover:text-accent transition-colors line-clamp-2">
+                                  {cert.name}
+                                </h3>
+                                <p className="text-accent font-medium text-sm">
+                                  {cert.issuer}
+                                </p>
+                                <span className="text-white/60 text-sm">
+                                  {cert.date}
+                                </span>
+                              </div>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </ScrollArea>
                   </motion.div>
                 </TabsContent>
 

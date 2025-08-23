@@ -28,4 +28,13 @@
   .text-outline-hover {
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  /* Custom scrollbar hiding for mobile */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 }

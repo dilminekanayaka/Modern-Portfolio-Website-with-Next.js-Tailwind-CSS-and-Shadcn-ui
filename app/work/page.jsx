@@ -63,15 +63,20 @@ const projects = [
 
 const Work = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center -mt-20 py-8 xl:py-12">
+    <section className="min-h-screen flex flex-col justify-center py-20">
       <div className="container mx-auto px-4">
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.1, duration: 0.6, ease: "easeOut" },
+          }}
+          className="text-center -mb-16"
         ></motion.div>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 xl:gap-10">
           {projects.map((project, index) => (
             <motion.div
@@ -81,6 +86,7 @@ const Work = () => {
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="bg-[#232329] rounded-xl border border-white/10 overflow-hidden hover:border-accent/50 transition-all duration-300 group"
             >
+              {/* Image with Hover Overlay */}
               <div className="aspect-video bg-[#1a1a1f] relative overflow-hidden">
                 <img
                   src={project.image}
@@ -88,25 +94,28 @@ const Work = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  {/* GitHub Link */}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-accent transition-colors"
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:!bg-accent hover:text-black transition-colors"
                   >
                     <FaGithub className="text-lg" />
                   </a>
+                  {/* Live Link */}
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-accent transition-colors"
+                    className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:!bg-accent hover:text-black transition-colors"
                   >
                     <FaExternalLinkAlt className="text-lg" />
                   </a>
                 </div>
               </div>
 
+              {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-accent transition-colors">
                   {project.title}
